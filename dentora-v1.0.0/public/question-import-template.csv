@@ -1,0 +1,2 @@
+external_id,question_type,stem,clinical_vignette,option_a,option_b,option_c,option_d,option_e,correct_answers,explanation,learning_point,subject,topic,difficulty,tags,reference,status
+DENT-001,single_best_answer,"Enter the full question stem here","Optional clinical vignette","Option A","Option B","Option C","Option D","Option E",C,"Explain why C is correct and why alternatives are less appropriate","One concise take-home point","Restorative Dentistry","Caries","standard","caries|diagnosis","Optional source or guideline","draft"

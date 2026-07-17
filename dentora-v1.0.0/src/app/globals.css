@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6f8fb;
+  --foreground: #172033;
+  --card: #ffffff;
+  --muted: #667085;
+  --border: #e5eaf1;
+  --primary: #176b68;
+  --primary-strong: #0e5351;
+  --primary-soft: #e5f5f3;
+  --accent: #7557d3;
+  --danger: #c43d4b;
+  --warning: #a85f00;
+  --success: #16845b;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(23, 107, 104, .08), transparent 24rem),
+    radial-gradient(circle at 100% 10%, rgba(117, 87, 211, .07), transparent 26rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #bde3df; }
+
+.card { background: rgba(255,255,255,.94); border: 1px solid var(--border); border-radius: 1.25rem; box-shadow: 0 10px 30px rgba(22, 32, 51, .045); }
+.input { width: 100%; border: 1px solid #d6dde7; border-radius: .8rem; padding: .78rem .9rem; background: white; outline: none; transition: .2s; }
+.input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(23,107,104,.12); }
+.label { display: block; font-size: .82rem; font-weight: 700; color: #465267; margin-bottom: .42rem; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: .8rem; padding: .72rem 1rem; font-weight: 750; border: 1px solid transparent; cursor: pointer; transition: .18s ease; }
+.btn:disabled { opacity: .55; cursor: not-allowed; }
+.btn-primary { color: white; background: var(--primary); }
+.btn-primary:hover { background: var(--primary-strong); transform: translateY(-1px); }
+.btn-secondary { color: #273246; background: white; border-color: var(--border); }
+.btn-secondary:hover { border-color: #c9d2df; background: #fafbfc; }
+.btn-danger { color: white; background: var(--danger); }
+.badge { display: inline-flex; align-items: center; border-radius: 999px; padding: .28rem .6rem; font-size: .72rem; font-weight: 800; }
+.skeleton { background: linear-gradient(90deg,#eef1f5,#f8f9fb,#eef1f5); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+@media (max-width: 767px) {
+  body { padding-bottom: 4.8rem; }
+}
